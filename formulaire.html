@@ -1,0 +1,43 @@
+<div className="global_form">
+  <form onSubmit={handleSubmit} className="background_form">
+    <h2>Compléter le formulaire suivant :</h2>
+    <div className="data_label">
+      <label htmlFor="lastname">Nom :</label>
+      <input type="text" name="nom" value={newTickets.nom} onChange={handleChange} />
+    </div>
+
+    <div className="data_label">
+      <label htmlFor="firstname">Prénom :</label>
+      <input type="text" name="prenom" value={newTickets.prenom} onChange={handleChange} />
+    </div>
+
+    <div className="data_label">
+      <label htmlFor="mail">E-mail :</label>
+      <input type="email" name="email" value="" onChange={handleChange} />
+    </div>
+
+    <div className="data_label">
+      <label htmlFor="priority">Priorité :</label>
+      <select name="priorite" value="" onChange={handleChange}>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="Important">Important</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+    </div>
+
+    <div className="data_label">
+      <label htmlFor="title">Titre :</label>
+      <input type="text" name="titre" value={newTickets.titre} onChange={handleChange} />
+    </div>
+
+    <div className="data_label">
+      <label htmlFor="msg">Message :</label>
+      <textarea name="message" value={newTickets.message} onChange={handleChange}></textarea>
+    </div>
+
+    <button onClick={handleClickCancel} className="send_cancel_button">Annuler</button>
+    <button type="submit" className="send_cancel_button">Envoyer</button>
+
+  </form>
+</div>
